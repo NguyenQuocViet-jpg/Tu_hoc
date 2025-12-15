@@ -5,7 +5,7 @@ using namespace std;
 int main()
 {
     string str;
-    cout << "Nhập chuỗi|";
+    //cout << "Nhập chuỗi|";
     getline(cin, str);
 
     //xóa ký khoảng trắng ở đấu chuỗi
@@ -54,7 +54,7 @@ int main()
         }
     }
 
-    cout << "Chuỗi nhập|" << str << "|";
+    cout <<str;
 
     return 0;
 }
