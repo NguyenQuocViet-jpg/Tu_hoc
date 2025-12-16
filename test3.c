@@ -22,7 +22,7 @@ void inputSv(struct sinhvien *f)
 }
 void printSv(struct sinhvien *f)
 {
-    printf("%-15s | %-20s | %-6.2f \n", f->msv, f->ten, f->diem);
+    printf("%-12s | %-20s | %-6.2f \n", f->msv, f->ten, f->diem);
 }
 int main()
 {
