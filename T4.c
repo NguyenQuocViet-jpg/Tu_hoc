@@ -24,6 +24,22 @@ void print(struct sinhvien f)
 {
     printf("%-15s | %-30s | %-6.2f \n", f.msv, f.ten, f.diem);
 }
+void sapxep(struct sinhvien f[], int n)
+{
+    struct sinhvien temp;
+    for(int i = 0; i < n; i++)
+    {
+        for(int j = 0; j <= i; j++)
+        {
+            if(f[i].diem > f[j].diem)
+            {
+                temp = f[j];
+                f[j] = f[i];
+                f[i] = temp;
+            }
+        }
+    }
+}
 int main()
 {
     int n;
@@ -38,6 +54,10 @@ int main()
         printf("--- Nhập thông tin sinh viên %d---\n", i + 1);
         inputSv(&sd21301[i]);
     }
+
+    
+    sapxep(sd21301, n);
+    
 
     for(int i = 0; i < n; i++)
     {
